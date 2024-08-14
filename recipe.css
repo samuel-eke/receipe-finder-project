@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: white; */
+}
+
+body {
+  position: relative;
+  /* background-color: bisque; */
+}
+
+header {
+  padding: 20px;
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid orange;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 35px;
+}
+/* nav div {
+  background-color: white;
+  font-weight: 700;
+  font-size: 30px;
+  width: 50px;
+} */
+nav div img {
+  height: 36px;
+  width: 110px;
+  padding-bottom: 1px;
+  flex: 1;
+}
+/* nav .shift {
+  margin-left: 20px;
+  margin-right: 100px;
+} */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 0;
+}
+nav ul li {
+  position: relative;
+  margin-right: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  /* font-weight: 400; */
+  margin-top: 10px;
+  font-size: 18px;
+  font: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 17px;
+}
+nav ul li a :hover {
+  /* text-decoration: underline; */
+  cursor: pointer;
+  /* color: orange; */
+}
+/* nav ul li a i:hover {
+  color: orange;
+  text-decoration: none; 
+} */
+.drop-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+}
+.drop-menu li {
+  width: 150px;
+  text-align: left;
+}
+.drop-menu li a {
+  color: black;
+  padding: 5px;
+  padding-left: 10px;
+  display: block;
+  font-size: 15px;
+}
+.drop-menu li a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+.dropdown:hover .drop-menu {
+  display: block;
+}
+nav a i {
+  background-color: white;
+  margin-left: 5px;
+}
+/* .nav1:hover ~ .drop1 {
+  display: block;
+  background-color: #f9f9f9;
+  border: 1.5px solid orange;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+} 
+/* .drop1 {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  font-size: 20px;
+  background-color: white;
+}
+
+.nav2:hover ~ .drop2 {
+  display: block;
+  background-color: #f9f9f9;
+  border: 1.5px solid orange;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 300px;
+}
+.drop2 {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  font-size: 20px;
+}
+.nav3:hover ~ .drop3 {
+  display: block;
+  background-color: #f9f9f9;
+  border: 1.5px solid orange;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 500px;
+}
+.drop3 {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  font-size: 20px;
+  background-color: white;
+}
+.nav4:hover ~ .drop4 {
+  display: block;
+  background-color: #f9f9f9;
+  border: 1.5px solid orange;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  left: 700px;
+}
+.drop4 {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  font-size: 20px;
+  background-color: white;
+} */
+nav button {
+  background-color: burlywood;
+  opacity: 0.7;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  /* margin-bottom: 10px; */
+}
+
+nav button:hover {
+  opacity: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+.bar1 {
+  display: none;
+  width: 320px;
+  height: 40px;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  padding: 10px;
+}
+.bar2 {
+  display: none;
+  width: 150px;
+  height: 35px;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  padding: 10px;
+}
+.fa-magnifying-glass:hover ~ .bar2 {
+  display: block;
+  position: absolute;
+}
+nav button:focus ~ .bar1 {
+  display: block;
+}
+nav div i {
+  background-color: white;
+  color: orangered;
+  font-size: 25px;
+  /* padding: 10px; */
+  /* margin-bottom: 10px; */
+}
+nav div i:hover {
+  cursor: pointer;
+}
+.trend {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  transition: all 0.5s ease-in;
+}
+.trend a {
+  text-decoration: underline orange;
+  color: black;
+  font-size: 40px;
+  background-color: white;
+  transition: all 0.5s ease-in;
+}
+.trend i {
+  margin-left: 10px;
+  font-size: 25px;
+  background-color: white;
+  transition: all 0.5s ease-in;
+}
+.trend a:hover {
+  cursor: pointer;
+  text-decoration: underline red;
+  transform: scale(1.1);
+}
+.trend a:hover i {
+  color: green;
+  transform: scale(1.1);
+}
+.card-con {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.card {
+  width: 20%;
+  height: 400px;
+  background-color: orange;
+  margin: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px black;
+  transition: transform 0.3s ease-in;
+  border-radius: 5px;
+}
+.card:hover {
+  opacity: 0.8;
+  transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card h6 {
+  background-color: orange;
+  margin-left: 10px;
+  font-size: 15px;
+  /* font-style: italic; */
+  color: brown;
+}
+.card p {
+  color: white;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: orange;
+  font-size: 30px;
+}
+.card span {
+  background-color: orange;
+  color: white;
+}
+.card span i {
+  background-color: orange;
+  margin-left: 10px;
+  color: aqua;
+}
+.tt {
+  width: 100%;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  background-color: bisque;
+}
+.team-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* height: 100%; */
+  width: 40%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.team-left img {
+  width: 300px;
+  height: 100px;
+  margin-left: 50px;
+}
+.team-left h1 {
+  font-size: 35px;
+}
+.team-left p {
+  font-size: 20px;
+  font-weight: 400;
+  /* margin-left: 40px; */
+  text-align: left;
+  padding-right: 100px;
+}
+.team-left button {
+  background-color: burlywood;
+  opacity: 0.7;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 120px;
+}
+.team-left button:hover {
+  opacity: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+.team-left button i {
+  margin-left: 10px;
+  background-color: burlywood;
+  color: red;
+}
+.team-right {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  float: right;
+  margin-left: auto;
+  height: 60vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #ffff;
+  margin-right: 20px;
+  border: 2px solid burlywood;
+  border-radius: 5px;
+  box-shadow: -10px 10px 5px 0 rgba(0, 0, 0, 0.5);
+  /* box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.5),
+    -10px -10px 5px 0 rgba(0, 0, 0, 0.5); */
+}
+.team-right:hover {
+  box-shadow: 0 0 10px black;
+  border: none;
+}
+.team-right img {
+  width: 160px;
+  height: 170px;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in;
+  border: 1px solid orange;
+}
+.team-right img:hover {
+  /* transform: scale(1.05); */
+  cursor: pointer;
+  /* opacity: 0.9; */
+}
+.id {
+  background-color: #ffff;
+  cursor: pointer;
+  transition: transform 0.5s ease-in;
+}
+.id:hover {
+  transform: scale(1.05);
+}
+.id p {
+  background-color: #ffff;
+  color: black;
+  text-align: center;
+  font-size: small;
+  font-family: cursive;
+}
+.id p:hover {
+  /* transform: scale(1.1); */
+  text-decoration: underline;
+}
+.id h6 {
+  background-color: #ffff;
+  text-align: center;
+  color: #333;
+  font-size: smaller;
+  font-family: cursive;
+}
